@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    to_bool (0.0.1)
+    to_b (0.0.2)
 
 GEM
   remote: http://rubygems.org/
@@ -41,5 +41,5 @@ DEPENDENCIES
   coveralls (~> 0.6.7)
   rake
   rspec (~> 2.13.0)
-  to_bool!
+  to_b!
   yard

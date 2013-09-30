@@ -8,3 +8,7 @@ end
 class Fixnum
   include Bool
 end
+
+class Symbol
+  include Bool
+end

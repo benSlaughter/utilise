@@ -8,3 +8,37 @@ to_bool
 [![Gem Version](https://badge.fury.io/rb/to_b.png)](http://badge.fury.io/rb/to_b)
 
 Extends classes to include the to_b method
+Currently Extends:
+ * Fixnum
+ * String
+ * Symbol
+
+```ruby
+gem install to_b
+```
+
+```ruby
+require 'to_bool'
+```
+
+```ruby
+1.to_b
+=> true
+
+'yes'.to_b
+=> true
+
+:t.to_b
+=> true
+```
+
+```ruby
+0.to_b
+=> false
+
+'no'.to_b
+=> false
+
+:f.to_b
+=> false
+```
