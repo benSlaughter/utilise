@@ -1,44 +1,44 @@
-to_bool
+Utilise
 =======
 
-[![Code Climate](https://codeclimate.com/github/benSlaughter/to_bool.png)](https://codeclimate.com/github/benSlaughter/to_bool)
-[![Build Status](https://travis-ci.org/benSlaughter/to_bool.png?branch=master)](https://travis-ci.org/benSlaughter/to_bool)
-[![Dependency Status](https://gemnasium.com/benSlaughter/to_bool.png)](https://gemnasium.com/benSlaughter/to_bool)
-[![Coverage Status](https://coveralls.io/repos/benSlaughter/to_bool/badge.png)](https://coveralls.io/r/benSlaughter/to_bool)
-[![Gem Version](https://badge.fury.io/rb/to_b.png)](http://badge.fury.io/rb/to_b)
+[![Code Climate](https://codeclimate.com/github/benSlaughter/utilise.png)](https://codeclimate.com/github/benSlaughter/utilise)
+[![Build Status](https://travis-ci.org/benSlaughter/utilise.png?branch=master)](https://travis-ci.org/benSlaughter/utilise)
+[![Dependency Status](https://gemnasium.com/benSlaughter/utilise.png)](https://gemnasium.com/benSlaughter/utilise)
+[![Coverage Status](https://coveralls.io/repos/benSlaughter/utilise/badge.png)](https://coveralls.io/r/benSlaughter/utilise)
+[![Gem Version](https://badge.fury.io/rb/utilise.png)](http://badge.fury.io/rb/utilise)
 
-Extends classes to include the to_b method
+Extends classes to include the to_bool method
 Currently Extends:
  * Fixnum
  * String
  * Symbol
 
 ```ruby
-gem install to_b
+gem install utilise
 ```
 
 ```ruby
-require 'to_bool'
+require 'utilise'
 ```
 
 ```ruby
-1.to_b
+1.to_bool
 => true
 
-'yes'.to_b
+'yes'.to_bool
 => true
 
-:t.to_b
+:t.to_bool
 => true
 ```
 
 ```ruby
-0.to_b
+0.to_bool
 => false
 
-'no'.to_b
+'no'.to_bool
 => false
 
-:f.to_b
+:f.to_bool
 => false
 ```
