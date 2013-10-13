@@ -1,14 +1,14 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'to_bool/version'
+require 'utilise/version'
 
 Gem::Specification.new do |spec|
-  spec.name         = 'to_b'
-  spec.summary      = 'Converts strings and fixnum to boolean'
-  spec.description  = 'Converts strings and fixnum to boolean'
-  spec.homepage     = 'http://benslaughter.github.io/to_bool/'
-  spec.version      = Bool::VERSION
-  spec.date         = Bool::DATE
+  spec.name         = 'utilise'
+  spec.summary      = 'Utilises a few extra tools'
+  spec.description  = 'Extends a few ruby classes with helpful tools, currently: X.to_bool'
+  spec.homepage     = 'http://benslaughter.github.io/utilise/'
+  spec.version      = Utilise::VERSION
+  spec.date         = Utilise::DATE
   spec.license      = 'MIT'
 
   spec.author       = 'Ben Slaughter'
