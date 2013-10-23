@@ -1,12 +1,7 @@
 module Utilise
   module Matchers
     def is_bool?
-      case self.class
-      when TrueClass, FalseClass
-        true
-      else
-        false
-      end
+      self.is_a?(TrueClass) || self.is_a?(FalseClass)
     end
   end
 end
