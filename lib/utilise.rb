@@ -1,5 +1,6 @@
 require 'utilise/bool.rb'
 require 'utilise/matchers.rb'
+require 'utilise/time.rb'
 require 'utilise/version.rb'
 
 class String
@@ -16,4 +17,8 @@ end
 
 class Object
   include Utilise::Matchers
+end
+
+class Time
+  extend Utilise::Time
 end
