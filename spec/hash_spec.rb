@@ -22,7 +22,15 @@ describe Hash do
       expect({'key' => 'no'}.to_bool).to eql({'key' => false})
     end
 
-    it "returns original hash when key value is not 'yes' or 'no'" do
+    it "returns hash with true when key value is 'true'" do
+      expect({'key' => 'true'}.to_bool).to eql({'key' => true})
+    end
+
+    it "returns hash with false when key value is 'false'" do
+      expect({'key' => 'false'}.to_bool).to eql({'key' => false})
+    end
+
+    it "returns original hash when key value is not 'yes', 'no', 'true or 'false'" do
       expect({'key' => 'value'}.to_bool).to eql({'key' => 'value'})
     end
 

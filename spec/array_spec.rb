@@ -22,7 +22,15 @@ describe Array do
       expect(['no'].to_bool).to eql([false])
     end
 
-    it "returns original array when key value is not 'yes' or 'no'" do
+    it "returns array with true when key value is 'true'" do
+      expect(['true'].to_bool).to eql([true])
+    end
+
+    it "returns array with false when key value is 'false'" do
+      expect(['false'].to_bool).to eql([false])
+    end
+
+    it "returns original array when key value is not 'yes', 'no', 'true' or 'false'" do
       expect(['value'].to_bool).to eql(['value'])
     end
 
