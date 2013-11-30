@@ -10,9 +10,9 @@ module Utilise
       when String, Fixnum, Symbol
         bool_it object
       when Hash
-        to_bool_hash object
+        bool_hash object
       when Array
-        to_bool_array object
+        bool_array object
       end
     end
 
@@ -20,7 +20,7 @@ module Utilise
     # value to a boolean if it matches rules
     #
     # @param hash [Hash] the hash
-    def to_bool_hash hash
+    def bool_hash hash
       hash.each do |k,v|
         val = to_bool(hash[k])
         hash[k] = val unless val.nil?
@@ -31,7 +31,7 @@ module Utilise
     # element to a boolean if it matches rules
     #
     # @param array [Array] the array
-    def to_bool_array array
+    def bool_array array
       array.each_index do |i|
         val = to_bool(array[i])
         array[i] = val unless val.nil?
