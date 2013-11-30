@@ -8,10 +8,15 @@ Utilise
 [![Gem Version](https://badge.fury.io/rb/utilise.png)](http://badge.fury.io/rb/utilise)
 
 Extends classes to include the to_bool method
-Currently Extends:
+
+Currently extends:
  * Fixnum
  * String
  * Symbol
+ * Hash
+ * Array
+
+Hashes and Arrays will have all values iterated.
 
 ```ruby
 gem install utilise
@@ -30,6 +35,12 @@ require 'utilise'
 
 :t.to_bool
 => true
+
+{'key' => 1}.to_bool
+=> {'key' => true}
+
+[1].to_bool
+=> [true]
 ```
 
 ```ruby
@@ -41,4 +52,10 @@ require 'utilise'
 
 :f.to_bool
 => false
+
+{'key' => 0}.to_bool
+=> {'key' => false}
+
+[0].to_bool
+=> [false]
 ```
