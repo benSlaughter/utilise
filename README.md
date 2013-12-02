@@ -15,6 +15,7 @@ Currently extends:
  * Symbol
  * Hash
  * Array
+ * Object
 
 Hashes and Arrays will have all values iterated.
 
@@ -58,4 +59,23 @@ require 'utilise'
 
 [0].to_bool
 => [false]
+```
+
+```
+Time.unique
+=> "80347765"
+```
+
+```
+true.is_bool?
+=> true
+
+false.is_bool?
+=> true
+
+1.is_bool?
+=> false
+
+"true".is_bool?
+=> false
 ```
