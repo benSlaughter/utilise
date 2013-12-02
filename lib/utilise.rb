@@ -22,3 +22,11 @@ end
 class Time
   extend Utilise::Time
 end
+
+class Hash
+  include Utilise::Bool
+end
+
+class Array
+  include Utilise::Bool
+end
