@@ -61,12 +61,12 @@ require 'utilise'
 => [false]
 ```
 
-```
+```ruby
 Time.unique
 => "80347765"
 ```
 
-```
+```ruby
 true.is_bool?
 => true
 
