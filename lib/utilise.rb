@@ -12,3 +12,11 @@ end
 class Symbol
   include Utilise::Bool
 end
+
+class Hash
+  include Utilise::Bool
+end
+
+class Array
+  include Utilise::Bool
+end
