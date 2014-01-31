@@ -44,9 +44,9 @@ module Utilise
     # @returns [Boolean] true/false returned
     def bool_it object
       case object.to_s
-      when /true/i, /yes/i, /t/i, /1/i
+      when /^true$/i, /^yes$/i, /^t$/i, /^1$/i
         true
-      when /false/i, /no/i, /f/i, /0/i
+      when /^false$/i, /^no$/i, /^f$/i, /^0$/i
         false
       end
     end

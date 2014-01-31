@@ -33,5 +33,13 @@ describe String do
     it "returns false when 0" do
       expect('0'.to_bool).to be false
     end
+
+    it "returns nil when positive" do
+      expect('positive'.to_bool).to be nil
+    end
+
+    it "returns nil when negative" do
+      expect('negative'.to_bool).to be nil
+    end
   end
 end
