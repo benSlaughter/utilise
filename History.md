@@ -1,5 +1,9 @@
 # History
 ## Released Versions
+### Version 0.3.0
+#### Minor: Updated to_bool regex
+ * Updated to_bool regular expressions
+
 ### Version 0.2.0
 #### Minor: renamed from to_b to utilise as i will include other helpful tools
  * Added new to bool fuctionality for arrays and hashes
