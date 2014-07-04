@@ -5,6 +5,9 @@ module Utilise
       def bool?
         self.is_a?(TrueClass) || self.is_a?(FalseClass)
       end
+
+      # NOTE: This keeps backwards compatability
+      alias_method :is_bool?, :bool?
     end
   end
 end

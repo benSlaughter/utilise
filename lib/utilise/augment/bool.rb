@@ -17,9 +17,6 @@ module Utilise
         end
       end
 
-      # NOTE: This keeps backwards compatability
-      alias_method :is_bool?, :bool?
-
       # Iterates through hash and updates each key
       # value to a boolean if it matches rules
       #
