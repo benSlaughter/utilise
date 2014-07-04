@@ -67,15 +67,15 @@ Time.unique
 ```
 
 ```ruby
-true.is_bool?
+true.bool?
 => true
 
-false.is_bool?
+false.bool?
 => true
 
-1.is_bool?
+1.bool?
 => false
 
-"true".is_bool?
+"true".bool?
 => false
 ```

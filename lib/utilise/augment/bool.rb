@@ -1,12 +1,12 @@
 module Utilise
   module Augment
+    # Extends classes that could be treated as a boolean
     module Bool
-
       # Returns bool based on object passed
       #
       # @param object [Object] the object
       # @return [Object] returns object boolean
-      def to_bool object = self
+      def to_bool(object = self)
         case object
         when String, Fixnum, Symbol
           bool_it object
@@ -17,14 +17,17 @@ module Utilise
         end
       end
 
+      # NOTE: This keeps backwards compatability
+      alias_method :is_bool?, :bool?
+
       # Iterates through hash and updates each key
       # value to a boolean if it matches rules
       #
       # @param hash [Hash] the hash
-      def bool_hash hash
-        hash.each do |k,v|
-          val = to_bool(hash[k])
-          hash[k] = val unless val.nil?
+      def bool_hash(hash)
+        hash.each do |key, val|
+          val = to_bool(val)
+          hash[key] = val unless val.nil?
         end
       end
 
@@ -32,10 +35,10 @@ module Utilise
       # element to a boolean if it matches rules
       #
       # @param array [Array] the array
-      def bool_array array
-        array.each_index do |i|
-          val = to_bool(array[i])
-          array[i] = val unless val.nil?
+      def bool_array(array)
+        array.each_index do |index|
+          val = to_bool(array[index])
+          array[index] = val unless val.nil?
         end
       end
 
@@ -43,7 +46,7 @@ module Utilise
       #
       # @param array [Array] the array
       # @returns [Boolean] true/false returned
-      def bool_it object
+      def bool_it(object)
         case object.to_s
         when /^true$/i, /^yes$/i, /^t$/i, /^1$/i
           true
