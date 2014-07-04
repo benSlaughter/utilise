@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.description  = 'Extends a few ruby classes with helpful tools, currently: X.to_bool'
   spec.homepage     = 'http://benslaughter.github.io/utilise/'
   spec.version      = Utilise::VERSION
+  spec.version      = "#{spec.version}-alpha-#{ENV['TRAVIS_BUILD_NUMBER']}" if ENV['TRAVIS']
   spec.date         = Utilise::DATE
   spec.license      = 'MIT'
 
