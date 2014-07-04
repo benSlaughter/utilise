@@ -1,5 +1,9 @@
 # History
 ## Released Versions
+### Version 0.4.0
+#### Minor: Moved all existing utilise extentions to augment
+ * Updated file structure still backwards compatible
+
 ### Version 0.3.0
 #### Minor: Updated to_bool regex
  * Updated to_bool regular expressions
@@ -13,7 +17,7 @@
 ### Version 0.1.0
 #### Minor: renamed from to_b to utilise as i will include other helpful tools
  * Renamed files
- * changed to_b to to_bool
+ * Changed to_b to to_bool
 
 ### Version 0.0.2
 #### Patch: Symbol
