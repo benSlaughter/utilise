@@ -1,4 +1,5 @@
 require 'coveralls'
+require 'pry'
 
 Coveralls.wear!
 require 'utilise'

@@ -1,6 +1,11 @@
-require 'utilise/augment/bool.rb'
-require 'utilise/augment/matchers.rb'
-require 'utilise/augment/time.rb'
+module Utilise
+  # The Augment module
+  module Augment
+    require 'utilise/augment/bool.rb'
+    require 'utilise/augment/matchers.rb'
+    require 'utilise/augment/time.rb'
+  end
+end
 
 # Extend existing ruby class String
 class String

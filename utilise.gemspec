@@ -20,10 +20,12 @@ Gem::Specification.new do |spec|
   spec.files        += Dir.glob('spec/**/*')
   spec.test_files   = Dir.glob('spec/**/*')
   spec.require_path = 'lib'
+  spec.add_runtime_dependency 'hashie'
 
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'yard'
   spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rubocop'
 end
