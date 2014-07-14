@@ -112,5 +112,6 @@ module Utilise
 
     require 'utilise/http/first_line.rb'
     require 'utilise/http/headers.rb'
+    require 'utilise/http/body.rb'
   end
 end
