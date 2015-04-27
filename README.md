@@ -63,7 +63,7 @@ require 'utilise'
 
 ```ruby
 Time.unique
-=> "80347765"
+=> '80347765'
 ```
 
 ```ruby
@@ -76,6 +76,17 @@ false.bool?
 1.bool?
 => false
 
-"true".bool?
+'true'.bool?
 => false
+```
+
+```ruby
+'snake_case'.camel
+=> 'SnakeCase'
+
+'space case'.snake
+=> 'space_case'
+
+'CamelCase'.space
+=> 'camel case'
 ```

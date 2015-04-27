@@ -1,5 +1,12 @@
 # History
 ## Released Versions
+### Version 0.4.1
+#### Patch: Added string modify module
+ * Added new string methods for updating a string
+   - String#camel
+   - String#snake
+   - String#space
+
 ### Version 0.4.0
 #### Minor: Moved all existing utilise extentions to augment
  * Updated file structure still backwards compatible
