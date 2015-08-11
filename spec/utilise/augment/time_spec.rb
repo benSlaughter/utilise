@@ -1,4 +1,4 @@
-require 'helper'
+require 'spec_helper'
 
 describe Time do
   describe '#unique' do

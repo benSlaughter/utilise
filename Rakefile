@@ -1,9 +1,12 @@
-require 'rubygems'
+require 'bundler'
+# This is the same as running 'bundle exec rake'
+# All gems will be required at the correct version
+Bundler.setup
+
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 require 'yard'
 
-desc 'Run all examples'
 RSpec::Core::RakeTask.new(:spec) do |t|
   t.rspec_opts = %w(--color --format progress)
 end
@@ -15,8 +18,11 @@ end
 
 YARD::Rake::YardocTask.new do |t|
   t.files   = ['lib/**/*.rb']
-  # t.options = ['--any', '--extra', '--opts'] # optional
-  # t.options = ['--list-undoc'] # optional
+  t.options = ['--list-undoc']
 end
 
-task default: [:spec, :rubocop]
+task :version do
+  puts Utilise.version(true)
+end
+
+task default: %w(rubocop spec)

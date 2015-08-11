@@ -1,4 +1,4 @@
-require 'helper'
+require 'spec_helper'
 
 describe Symbol do
   describe '#to_bool' do

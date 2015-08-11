@@ -17,7 +17,12 @@ Currently extends:
  * Array
  * Object
 
+New Classes
+ * Hashie::Bash
+
 Hashes and Arrays will have all values iterated.
+
+## Usage
 
 ```ruby
 gem install utilise
@@ -89,4 +94,11 @@ false.bool?
 
 'CamelCase'.space
 => 'camel case'
+```
+
+```ruby
+hash = Hashie::Mash.new
+=> {}
+hash.key
+=> 
 ```

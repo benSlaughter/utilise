@@ -1,4 +1,4 @@
-require 'helper'
+require 'spec_helper'
 
 describe Fixnum do
   describe '#to_bool' do

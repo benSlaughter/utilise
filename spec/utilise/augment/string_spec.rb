@@ -1,4 +1,4 @@
-require 'helper'
+require 'spec_helper'
 
 describe String do
   describe '#to_bool' do
@@ -55,6 +55,10 @@ describe String do
     it 'returns a camel case from space case' do
       expect('camel case'.camel).to eq 'CamelCase'
     end
+
+    it 'returns a camel case from complex camel case' do
+      expect('CamelONECase'.camel).to eq 'CamelOneCase'
+    end
   end
 
   describe '#snake' do
@@ -69,6 +73,10 @@ describe String do
     it 'returns a snake case from space case' do
       expect('snake case'.snake).to eq 'snake_case'
     end
+
+    it 'returns a snake case from complex camel case' do
+      expect('SnakeONECase'.snake).to eq 'snake_one_case'
+    end
   end
 
   describe '#space' do
@@ -82,6 +90,10 @@ describe String do
 
     it 'returns a space case from space case' do
       expect('space case'.space).to eq 'space case'
+    end
+
+    it 'returns a space case from complex camel case' do
+      expect('SpaceONECase'.space).to eq 'space one case'
     end
   end
 end
