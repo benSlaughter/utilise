@@ -17,7 +17,12 @@ Currently extends:
  * Array
  * Object
 
+New Classes
+ * Hashie::Bash
+
 Hashes and Arrays will have all values iterated.
+
+## Usage
 
 ```ruby
 gem install utilise
@@ -63,7 +68,7 @@ require 'utilise'
 
 ```ruby
 Time.unique
-=> "80347765"
+=> '80347765'
 ```
 
 ```ruby
@@ -76,6 +81,24 @@ false.bool?
 1.bool?
 => false
 
-"true".bool?
+'true'.bool?
 => false
+```
+
+```ruby
+'snake_case'.camel
+=> 'SnakeCase'
+
+'space case'.snake
+=> 'space_case'
+
+'CamelCase'.space
+=> 'camel case'
+```
+
+```ruby
+hash = Hashie::Mash.new
+=> {}
+hash.key
+=> 
 ```
