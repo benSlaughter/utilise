@@ -1,4 +1,4 @@
-require 'utilise/augment/time.rb'
+require 'utilise/augment/time'
 
 # Extend existing ruby class Time
 class Time

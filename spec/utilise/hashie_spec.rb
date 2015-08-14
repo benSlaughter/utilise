@@ -9,7 +9,7 @@ describe Utilise::Augment::Crash::Bash do
 
   context 'a bash with keys' do
     before do
-      @hash = Hashie::Bash.new(a:1, b:{ c: 2, d: { e: 3, f: {} } })
+      @hash = Hashie::Bash.new(a: 1, b: { c: 2, d: { e: 3, f: {} } })
     end
 
     it 'has first layer keys' do

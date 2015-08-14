@@ -1,0 +1,4 @@
+Metrics/LineLength:
+  Exclude:
+    - '*.gemspec'
+    - 'spec/**/*_spec.rb'

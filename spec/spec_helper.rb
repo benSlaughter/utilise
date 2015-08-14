@@ -26,4 +26,3 @@ end
 Coveralls.wear!
 SimpleCov.start
 require 'utilise'
-

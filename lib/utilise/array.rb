@@ -1,4 +1,4 @@
-require 'utilise/augment/bool.rb'
+require 'utilise/augment/bool'
 
 # Extend existing ruby class Array
 class Array
