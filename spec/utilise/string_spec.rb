@@ -45,19 +45,19 @@ describe String do
 
   describe '#camel' do
     it 'returns a camel case from camel case' do
-      expect('CamelCase'.camel).to eq 'CamelCase'
+      expect('CamelCase'.camel).to eq 'camelCase'
     end
 
     it 'returns a camel case from snake case' do
-      expect('camel_case'.camel).to eq 'CamelCase'
+      expect('camel_case'.camel).to eq 'camelCase'
     end
 
     it 'returns a camel case from space case' do
-      expect('camel case'.camel).to eq 'CamelCase'
+      expect('camel case'.camel).to eq 'camelCase'
     end
 
     it 'returns a camel case from complex camel case' do
-      expect('CamelONECase'.camel).to eq 'CamelOneCase'
+      expect('CamelONECase'.camel).to eq 'camelOneCase'
     end
   end
 

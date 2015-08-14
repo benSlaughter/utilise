@@ -13,7 +13,6 @@ end
 
 RuboCop::RakeTask.new(:rubocop) do |t|
   t.formatters = ['progress']
-  t.patterns = ['lib/**/*.rb']
 end
 
 YARD::Rake::YardocTask.new do |t|

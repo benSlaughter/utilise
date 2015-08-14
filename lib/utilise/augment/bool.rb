@@ -41,7 +41,7 @@ module Utilise
 
       # Returns boolean value if object matches rules
       #
-      # @param array [Array] the array
+      # @param object [Object] object to bool
       # @returns [Boolean] true/false returned
       def bool_it(object)
         case object.to_s

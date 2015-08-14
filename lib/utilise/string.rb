@@ -1,5 +1,5 @@
-require 'utilise/augment/bool.rb'
-require 'utilise/augment/modify.rb'
+require 'utilise/augment/bool'
+require 'utilise/augment/modify'
 
 # Extend existing ruby class String
 class String

@@ -1,4 +1,4 @@
-require 'utilise/augment/matchers.rb'
+require 'utilise/augment/matchers'
 
 # Extend existing ruby class Object
 class Object

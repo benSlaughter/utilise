@@ -15,9 +15,10 @@ Gem::Specification.new do |spec|
   spec.author       = 'Ben Slaughter'
   spec.email        = 'b.p.slaughter@gmail.com'
 
-  spec.files        = ['README.md', 'License.md']
-  spec.files        += Dir.glob('lib/**/*.rb')
-  spec.files        += Dir.glob('spec/**/*')
+  spec.files = ['README.md', 'License.md']
+  spec.files += Dir.glob('lib/**/*.rb')
+  spec.files += Dir.glob('spec/**/*')
+
   spec.test_files   = Dir.glob('spec/**/*')
   spec.require_path = 'lib'
 

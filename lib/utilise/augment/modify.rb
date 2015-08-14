@@ -4,7 +4,8 @@ module Utilise
     module Modify
       # Return a string in modified camel case
       def camel
-        split_up.map(&:capitalize).join('')
+        array = split_up
+        array.first + array[1..-1].map(&:capitalize).join('')
       end
 
       # Return a string in snake case
@@ -21,7 +22,8 @@ module Utilise
 
       # Splits up the current string into an array and normalises it
       def split_up
-        arr = split(/(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|(?=_)|(?= )/)
+        regex = /(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|(?=_)|(?= )/
+        arr = to_s.split(regex)
         arr.map!(&:downcase)
         arr.map!(&:strip)
         arr.map { |s| s.delete('_') }
