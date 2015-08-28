@@ -37,7 +37,7 @@ describe Utilise::Augment::Crash::Bash do
     end
 
     it 'raises the correct error' do
-      expect { @hash.x }.to raise_error(/No value for:\w+ in .+/)
+      expect { @hash.x }.to raise_error(/No key 'x' in .+/)
     end
   end
 end
