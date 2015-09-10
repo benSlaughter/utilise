@@ -2,3 +2,7 @@ Metrics/LineLength:
   Exclude:
     - '*.gemspec'
     - 'spec/**/*_spec.rb'
+
+Style/SymbolProc:
+  Exclude:
+    - 'lib/utilise/augment/hash.rb'

@@ -63,7 +63,7 @@ describe Hash do
     end
 
     it 'returns correct hash with multiple values' do
-      expect({ 'key0' => 1, 'key1' => 0, 'key2' => 'yes', 'key3' => 'false', 'key4' => :t, 'key4' => :f, 'key5' => :true, 'key6' => :false }.to_bool).to eql('key0' => true, 'key1' => false, 'key2' => true, 'key3' => false, 'key4' => true, 'key4' => false, 'key5' => true, 'key6' => false)
+      expect({ 'key0' => 1, 'key1' => 0, 'key2' => 'yes', 'key3' => 'false', 'key4' => :t, 'key5' => :f, 'key6' => :true, 'key7' => :false }.to_bool).to eql('key0' => true, 'key1' => false, 'key2' => true, 'key3' => false, 'key4' => true, 'key5' => false, 'key6' => true, 'key7' => false)
     end
 
     it 'returns correct multi-level hash with multiple values' do

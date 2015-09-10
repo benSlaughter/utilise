@@ -1,9 +1,9 @@
 # Utilise
 module Utilise
   # The current gem version
-  VERSION = '0.5.1'
+  VERSION = '0.6.0'
   # The version update date
-  DATE = '2015-08-28'
+  DATE = '2015-09-10'
   # Debug output message
   MSG = 'Version %s %s (running on %s-%s)'
 
