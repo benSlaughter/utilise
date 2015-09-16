@@ -48,12 +48,24 @@ describe String do
       expect('CamelCase'.camel).to eq 'camelCase'
     end
 
+    it 'returns a camel case from numeric camel case' do
+      expect('Camel1Case'.camel).to eq 'camel1Case'
+    end
+
     it 'returns a camel case from snake case' do
       expect('camel_case'.camel).to eq 'camelCase'
     end
 
+    it 'returns a camel case from numeric snake case' do
+      expect('camel1_case'.camel).to eq 'camel1Case'
+    end
+
     it 'returns a camel case from space case' do
       expect('camel case'.camel).to eq 'camelCase'
+    end
+
+    it 'returns a camel case from numeric space case' do
+      expect('camel1 case'.camel).to eq 'camel1Case'
     end
 
     it 'returns a camel case from complex camel case' do
@@ -66,12 +78,24 @@ describe String do
       expect('SnakeCase'.snake).to eq 'snake_case'
     end
 
+    it 'returns a snake case from numeric camel case' do
+      expect('Snake1Case'.snake).to eq 'snake1_case'
+    end
+
     it 'returns a snake case from snake case' do
       expect('snake_case'.snake).to eq 'snake_case'
     end
 
+    it 'returns a snake case from numeric snake case' do
+      expect('snake1_case'.snake).to eq 'snake1_case'
+    end
+
     it 'returns a snake case from space case' do
       expect('snake case'.snake).to eq 'snake_case'
+    end
+
+    it 'returns a snake case from numeric space case' do
+      expect('snake1 case'.snake).to eq 'snake1_case'
     end
 
     it 'returns a snake case from complex camel case' do
@@ -84,12 +108,24 @@ describe String do
       expect('SpaceCase'.space).to eq 'space case'
     end
 
+    it 'returns a space case from numeric camel case' do
+      expect('SpaceCase'.space).to eq 'space case'
+    end
+
     it 'returns a space case from snake case' do
       expect('space_case'.space).to eq 'space case'
     end
 
+    it 'returns a space case from numeric snake case' do
+      expect('space1_case'.space).to eq 'space1 case'
+    end
+
     it 'returns a space case from space case' do
       expect('space case'.space).to eq 'space case'
+    end
+
+    it 'returns a space case from numeric space case' do
+      expect('space1 case'.space).to eq 'space1 case'
     end
 
     it 'returns a space case from complex camel case' do
