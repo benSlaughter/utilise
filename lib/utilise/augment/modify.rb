@@ -22,7 +22,7 @@ module Utilise
 
       # Splits up the current string into an array and normalises it
       def split_up
-        regex = /(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|(?=_)|(?= )/
+        regex = /(?<=[a-z0-9])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|(?=_)|(?= )/
         arr = to_s.split(regex)
         arr.map!(&:downcase)
         arr.map!(&:strip)
