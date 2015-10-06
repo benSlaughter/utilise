@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Utilise do
   describe '.version' do
     it 'should return the current gem version' do
-      expect(Utilise.version).to eq('0.6.1')
+      expect(Utilise.version).to eq('0.6.2')
     end
 
     it 'should return the current gem version with debug information' do
