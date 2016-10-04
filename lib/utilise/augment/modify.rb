@@ -3,9 +3,14 @@ module Utilise
     # Extends classes that could be modified
     module Modify
       # Return a string in modified camel case
-      def camel
+      def camel(first_letter = :upper)
         array = split_up
-        array.first + array[1..-1].map(&:capitalize).join('')
+        case first_letter
+        when :upper
+          array.map(&:capitalize).join
+        when :lower
+          array.first + array[1..-1].map(&:capitalize).join
+        end
       end
 
       # Return a string in snake case

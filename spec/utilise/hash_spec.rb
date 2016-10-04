@@ -118,10 +118,10 @@ describe Hash do
 
     it 'coverts all keys to camel case' do
       new_hash = hash.camel_keys
-      expect(new_hash.key?('oneKey')).to be_truthy
-      expect(new_hash.key?('twoKey')).to be_truthy
-      expect(new_hash.key?('redKey')).to be_truthy
-      expect(new_hash['redKey'].key?('blueKey')).to be_truthy
+      expect(new_hash.key?('OneKey')).to be_truthy
+      expect(new_hash.key?('TwoKey')).to be_truthy
+      expect(new_hash.key?('RedKey')).to be_truthy
+      expect(new_hash['RedKey'].key?('BlueKey')).to be_truthy
     end
 
     it 'does not transfer the old keys' do
@@ -134,10 +134,10 @@ describe Hash do
     it 'does not convert the values' do
       new_hash = hash.camel_keys
 
-      expect(new_hash['oneKey']).to eql('aString')
-      expect(new_hash['twoKey']).to eql(['a_string'])
-      expect(new_hash['redKey']).to be_a(Hash)
-      expect(new_hash['redKey']['blueKey']).to eql('testing 123')
+      expect(new_hash['OneKey']).to eql('aString')
+      expect(new_hash['TwoKey']).to eql(['a_string'])
+      expect(new_hash['RedKey']).to be_a(Hash)
+      expect(new_hash['RedKey']['BlueKey']).to eql('testing 123')
     end
 
     it 'does not modify the original hash' do
