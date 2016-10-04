@@ -8,7 +8,7 @@ module Utilise
       class Bash < Hashie::Mash
         # The default proc to be used for the bash hash
         DEFAULT_PROC = lambda do |hash, key|
-          fail NameError, "No key '#{key}' in #{hash.to_hash.inspect}"
+          raise NameError, "No key '#{key}' in #{hash.to_hash.inspect}"
         end
 
         def initialize(source_hash = nil, default = nil, &blk)

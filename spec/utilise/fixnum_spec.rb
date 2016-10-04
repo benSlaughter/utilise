@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Fixnum do
+describe Integer do
   describe '#to_bool' do
     it 'returns true when 1' do
       expect(1.to_bool).to be true

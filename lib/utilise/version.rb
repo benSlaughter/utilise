@@ -1,11 +1,11 @@
 # Utilise
 module Utilise
   # The current gem version
-  VERSION = '1.0.0'
+  VERSION = '1.0.0'.freeze
   # The version update date
-  DATE = '2015-10-06'
+  DATE = '2015-10-06'.freeze
   # Debug output message
-  MSG = 'Version %s %s (running on %s-%s)'
+  MSG = 'Version %s %s (running on %s-%s)'.freeze
 
   module_function
 
