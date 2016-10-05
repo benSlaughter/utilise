@@ -44,32 +44,64 @@ describe String do
   end
 
   describe '#camel' do
-    it 'returns a camel case from camel case' do
-      expect('CamelCase'.camel).to eq 'camelCase'
+    context 'default option' do
+      it 'returns a camel case from camel case' do
+        expect('CamelCase'.camel).to eq 'CamelCase'
+      end
+
+      it 'returns a camel case from numeric camel case' do
+        expect('Camel1Case'.camel).to eq 'Camel1Case'
+      end
+
+      it 'returns a camel case from snake case' do
+        expect('camel_case'.camel).to eq 'CamelCase'
+      end
+
+      it 'returns a camel case from numeric snake case' do
+        expect('camel1_case'.camel).to eq 'Camel1Case'
+      end
+
+      it 'returns a camel case from space case' do
+        expect('camel case'.camel).to eq 'CamelCase'
+      end
+
+      it 'returns a camel case from numeric space case' do
+        expect('camel1 case'.camel).to eq 'Camel1Case'
+      end
+
+      it 'returns a camel case from complex camel case' do
+        expect('CamelONECase'.camel).to eq 'CamelOneCase'
+      end
     end
 
-    it 'returns a camel case from numeric camel case' do
-      expect('Camel1Case'.camel).to eq 'camel1Case'
-    end
+    context 'lower option' do
+      it 'returns a camel case from camel case' do
+        expect('CamelCase'.camel(:lower)).to eq 'camelCase'
+      end
 
-    it 'returns a camel case from snake case' do
-      expect('camel_case'.camel).to eq 'camelCase'
-    end
+      it 'returns a camel case from numeric camel case' do
+        expect('Camel1Case'.camel(:lower)).to eq 'camel1Case'
+      end
 
-    it 'returns a camel case from numeric snake case' do
-      expect('camel1_case'.camel).to eq 'camel1Case'
-    end
+      it 'returns a camel case from snake case' do
+        expect('camel_case'.camel(:lower)).to eq 'camelCase'
+      end
 
-    it 'returns a camel case from space case' do
-      expect('camel case'.camel).to eq 'camelCase'
-    end
+      it 'returns a camel case from numeric snake case' do
+        expect('camel1_case'.camel(:lower)).to eq 'camel1Case'
+      end
 
-    it 'returns a camel case from numeric space case' do
-      expect('camel1 case'.camel).to eq 'camel1Case'
-    end
+      it 'returns a camel case from space case' do
+        expect('camel case'.camel(:lower)).to eq 'camelCase'
+      end
 
-    it 'returns a camel case from complex camel case' do
-      expect('CamelONECase'.camel).to eq 'camelOneCase'
+      it 'returns a camel case from numeric space case' do
+        expect('camel1 case'.camel(:lower)).to eq 'camel1Case'
+      end
+
+      it 'returns a camel case from complex camel case' do
+        expect('CamelONECase'.camel(:lower)).to eq 'camelOneCase'
+      end
     end
   end
 

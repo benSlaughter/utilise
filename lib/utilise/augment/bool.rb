@@ -8,7 +8,7 @@ module Utilise
       # @return [Object] returns object boolean
       def to_bool(object = self)
         case object
-        when String, Fixnum, Symbol
+        when String, Integer, Symbol
           bool_it object
         when Hash
           bool_hash object
