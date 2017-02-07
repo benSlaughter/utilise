@@ -198,4 +198,90 @@ describe Hash do
       expect(old_hash['red key'][:blueKey]).to eql('testing 123')
     end
   end
+
+  describe '#string_keys' do
+    let(:hash) { { oneKey: 'aString', two_key: ['a_string'], redKey: { blue_key: 'testing 123' } } }
+
+    it 'converts all keys to a string' do
+      new_hash = hash.string_keys
+      expect(new_hash.key?('oneKey')).to be_truthy
+      expect(new_hash.key?('two_key')).to be_truthy
+      expect(new_hash.key?('redKey')).to be_truthy
+      expect(new_hash['redKey'].key?('blue_key')).to be_truthy
+    end
+
+    it 'does not keep the old keys' do
+      new_hash = hash.string_keys
+      expect(new_hash.key?(:oneKey)).to be_falsey
+      expect(new_hash.key?(:two_key)).to be_falsey
+      expect(new_hash.key?(:redKey)).to be_falsey
+      expect(new_hash['redKey'].key?(:blue_key)).to be_falsey
+    end
+
+    it 'does not convert the values' do
+      new_hash = hash.string_keys
+
+      expect(new_hash['oneKey']).to eql(hash[:oneKey])
+      expect(new_hash['two_key']).to eql(hash[:two_key])
+      expect(new_hash['redKey']['blue_key']).to eql(hash[:redKey][:blue_key])
+    end
+
+    it 'does not modify the original hash' do
+      new_hash = hash
+      new_hash.string_keys
+
+      expect(new_hash.key?(:oneKey)).to be_truthy
+      expect(new_hash.key?(:two_key)).to be_truthy
+      expect(new_hash.key?(:redKey)).to be_truthy
+      expect(new_hash[:redKey].key?(:blue_key)).to be_truthy
+
+      expect(new_hash[:oneKey]).to be(hash[:oneKey])
+      expect(new_hash[:two_key]).to be(hash[:two_key])
+      expect(new_hash[:redKey]).to be(hash[:redKey])
+      expect(new_hash[:redKey][:blue_key]).to be(hash[:redKey][:blue_key])
+    end
+  end
+
+  describe '#symbol_keys' do
+    let(:hash) { { 'oneKey' => 'aString', 'two_key' => ['a_string'], 'redKey' => { 'blue_key' => 'testing 123' } } }
+
+    it 'converts all keys to a symbol' do
+      new_hash = hash.symbol_keys
+      expect(new_hash.key?(:oneKey)).to be_truthy
+      expect(new_hash.key?(:two_key)).to be_truthy
+      expect(new_hash.key?(:redKey)).to be_truthy
+      expect(new_hash[:redKey].key?(:blue_key)).to be_truthy
+    end
+
+    it 'does not keep the old keys' do
+      new_hash = hash.symbol_keys
+      expect(new_hash.key?('oneKey')).to be_falsey
+      expect(new_hash.key?('two_key')).to be_falsey
+      expect(new_hash.key?('redKey')).to be_falsey
+      expect(new_hash[:redKey].key?('blue_key')).to be_falsey
+    end
+
+    it 'does not convert the values' do
+      new_hash = hash.symbol_keys
+
+      expect(new_hash[:oneKey]).to eql(hash['oneKey'])
+      expect(new_hash[:two_key]).to eql(hash['two_key'])
+      expect(new_hash[:redKey][:blue_key]).to eql(hash['redKey']['blue_key'])
+    end
+
+    it 'does not modify the original hash' do
+      new_hash = hash
+      new_hash.symbol_keys
+
+      expect(new_hash.key?('oneKey')).to be_truthy
+      expect(new_hash.key?('two_key')).to be_truthy
+      expect(new_hash.key?('redKey')).to be_truthy
+      expect(new_hash['redKey'].key?('blue_key')).to be_truthy
+
+      expect(new_hash['oneKey']).to be(hash['oneKey'])
+      expect(new_hash['two_key']).to be(hash['two_key'])
+      expect(new_hash['redKey']).to be(hash['redKey'])
+      expect(new_hash['redKey']['blue_key']).to be(hash['redKey']['blue_key'])
+    end
+  end
 end

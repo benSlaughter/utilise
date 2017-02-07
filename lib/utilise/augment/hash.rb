@@ -19,6 +19,16 @@ module Utilise
         utilise_deep_transform_keys(self) { |key| key.space }
       end
 
+      # Transforms all keys to a string
+      def string_keys
+        utilise_deep_transform_keys(self) { |key| key.to_s }
+      end
+
+      # Transforms all keys to a symbol
+      def symbol_keys
+        utilise_deep_transform_keys(self) { |key| key.to_sym }
+      end
+
       private
 
       # Deep transform keys in object
