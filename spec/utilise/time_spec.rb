@@ -7,7 +7,7 @@ describe Time do
     end
 
     it 'returns a string number' do
-      expect(Time.unique).to match(/\d+/)
+      expect(Time.unique.to_i).to be_a Integer
     end
 
     it 'returns a number from time to 3 decimal places' do

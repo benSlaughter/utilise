@@ -1,7 +1,7 @@
 require 'utilise/array'
-require 'utilise/fixnum'
 require 'utilise/hash'
 require 'utilise/hashie'
+require 'utilise/integer'
 require 'utilise/object'
 require 'utilise/string'
 require 'utilise/symbol'
