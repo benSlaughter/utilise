@@ -8,7 +8,7 @@ require 'rubocop/rake_task'
 require 'yard'
 
 RSpec::Core::RakeTask.new(:spec) do |t|
-  t.rspec_opts = %w(--color --format progress)
+  t.rspec_opts = %w[--color --format progress]
 end
 
 RuboCop::RakeTask.new(:rubocop) do |t|
@@ -24,4 +24,4 @@ task :version do
   puts Utilise.version(true)
 end
 
-task default: %w(rubocop spec)
+task default: %w[rubocop spec]

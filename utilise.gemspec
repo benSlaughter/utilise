@@ -2,13 +2,14 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'utilise/version'
 
+TRAVIS_VERSION = "#{Utilise::VERSION}-#{ENV['TRAVIS_BUILD_NUMBER']}".freeze
+
 Gem::Specification.new do |spec|
   spec.name         = 'utilise'
   spec.summary      = 'Utilises a few extra methods'
   spec.description  = 'Extends a few ruby classes with helpful methods'
   spec.homepage     = 'http://benslaughter.github.io/utilise/'
-  spec.version      = Utilise::VERSION
-  spec.version      = "#{spec.version}-#{ENV['TRAVIS_BUILD_NUMBER']}" if ENV['TRAVIS']
+  spec.version      = ENV['TRAVIS'] ? TRAVIS_VERSION : Utilise::VERSION
   spec.date         = Utilise::DATE
   spec.license      = 'MIT'
 
