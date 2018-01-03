@@ -6,27 +6,27 @@ module Utilise
     module Hash
       # Transforms all keys to snake case
       def snake_keys
-        utilise_deep_transform_keys(self) { |key| key.snake }
+        utilise_deep_transform_keys(self, &:snake)
       end
 
       # Transforms all keys to camel case
       def camel_keys
-        utilise_deep_transform_keys(self) { |key| key.camel }
+        utilise_deep_transform_keys(self, &:camel)
       end
 
       # Transforms all keys to space case
       def space_keys
-        utilise_deep_transform_keys(self) { |key| key.space }
+        utilise_deep_transform_keys(self, &:space)
       end
 
       # Transforms all keys to a string
       def string_keys
-        utilise_deep_transform_keys(self) { |key| key.to_s }
+        utilise_deep_transform_keys(self, &:to_s)
       end
 
       # Transforms all keys to a symbol
       def symbol_keys
-        utilise_deep_transform_keys(self) { |key| key.to_sym }
+        utilise_deep_transform_keys(self, &:to_sym)
       end
 
       private

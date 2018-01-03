@@ -32,6 +32,8 @@ gem install utilise
 require 'utilise'
 ```
 
+### to_bool
+
 ```ruby
 1.to_bool
 => true
@@ -66,10 +68,14 @@ require 'utilise'
 => [false]
 ```
 
+### Time#unique
+
 ```ruby
 Time.unique
 => '80347765'
 ```
+
+### bool?
 
 ```ruby
 true.bool?
@@ -85,20 +91,18 @@ false.bool?
 => false
 ```
 
+### string cases
+
 ```ruby
 'snake_case'.camel
 => 'SnakeCase'
+
+'snake_case'.camel(:lower)
+=> 'snakeCase'
 
 'space case'.snake
 => 'space_case'
 
 'CamelCase'.space
 => 'camel case'
-```
-
-```ruby
-hash = Hashie::Mash.new
-=> {}
-hash.key
-=> 
 ```

@@ -7,6 +7,9 @@ Metrics/BlockLength:
   Exclude:
       - 'spec/**/*_spec.rb'
 
-Style/SymbolProc:
+Lint/BooleanSymbol:
   Exclude:
-    - 'lib/utilise/augment/hash.rb'
+    - 'spec/utilise/array_spec.rb'
+    - 'spec/utilise/hash_spec.rb'
+    - 'spec/utilise/object_spec.rb'
+    - 'spec/utilise/symbol_spec.rb'
