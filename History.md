@@ -1,5 +1,13 @@
 # History
 ## Released Versions
+### Versions 1.2.0
+#### Minor: Fixed dependency vulnerabilities
+  * Updated readme
+  * Updated history file
+  * Fixed rubocop errors
+  * Updated gemspec to fix vulnerabilities
+
+
 ### Version 1.1.0
 #### Minor: Added functionality to modify hash keys 
  * Added string keys to hash
