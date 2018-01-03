@@ -1,5 +1,34 @@
 # History
 ## Released Versions
+### Version 1.1.0
+#### Minor: Added functionality to modify hash keys 
+ * Added string keys to hash
+ * Added symbol keys to hash
+ * Updated fixnum to integer as per rubocop rules
+
+### Version 1.0.0
+#### Major: Adding lower option to the camel method
+ * Adding the lower option for the first character in the "camel" method
+ * Fixing rubocop offenses 
+ 
+### Version 0.6.2
+#### Patch: Transform keys update
+ * Updated transform keys method as when used with active record it clashes
+
+### Version 0.6.1
+#### Patch: Updated modify regex to include numbers in look back
+ * Added new numeric value to regex look back
+ * Added new tests
+
+### Version 0.6.0
+#### Minor: Added hash modify keys methods
+ * Added hash modify keys methods
+ * Added test specs
+ * Fixed camelCase test specs
+ * Fixed camelCase methods
+ * Fixed several rubocop errors
+ * Removed .rb from file requires
+ 
 ### Version 0.4.1
 #### Patch: Added string modify module
  * Added new string methods for updating a string
