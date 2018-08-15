@@ -97,12 +97,15 @@ false.bool?
 'snake_case'.camel
 => 'SnakeCase'
 
-'snake_case'.camel(:lower)
-=> 'snakeCase'
+'kebab-case'.camel(:lower)
+=> 'kebabCase'
 
 'space case'.snake
 => 'space_case'
 
 'CamelCase'.space
 => 'camel case'
+
+'camelCase'.kebab
+=> 'camel-case'
 ```

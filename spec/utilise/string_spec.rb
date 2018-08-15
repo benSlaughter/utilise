@@ -72,6 +72,10 @@ describe String do
       it 'returns a camel case from complex camel case' do
         expect('CamelONECase'.camel).to eq 'CamelOneCase'
       end
+
+      it 'returns a camel case from camel case' do
+        expect('camel-case'.camel).to eq 'CamelCase'
+      end
     end
 
     context 'lower option' do
@@ -101,6 +105,10 @@ describe String do
 
       it 'returns a camel case from complex camel case' do
         expect('CamelONECase'.camel(:lower)).to eq 'camelOneCase'
+      end
+
+      it 'returns a camel case from camel case' do
+        expect('camel-case'.camel(:lower)).to eq 'camelCase'
       end
     end
   end
@@ -133,6 +141,10 @@ describe String do
     it 'returns a snake case from complex camel case' do
       expect('SnakeONECase'.snake).to eq 'snake_one_case'
     end
+
+    it 'returns a snake case from snake case' do
+      expect('snake-case'.snake).to eq 'snake_case'
+    end
   end
 
   describe '#space' do
@@ -162,6 +174,44 @@ describe String do
 
     it 'returns a space case from complex camel case' do
       expect('SpaceONECase'.space).to eq 'space one case'
+    end
+
+    it 'returns a space case from space case' do
+      expect('space-case'.space).to eq 'space case'
+    end
+  end
+
+  describe '#kebab' do
+    it 'returns a kebab case from camel case' do
+      expect('KebabCase'.kebab).to eq 'kebab-case'
+    end
+
+    it 'returns a kebab case from numeric camel case' do
+      expect('KebabCase'.kebab).to eq 'kebab-case'
+    end
+
+    it 'returns a kebab case from snake case' do
+      expect('kebab_case'.kebab).to eq 'kebab-case'
+    end
+
+    it 'returns a kebab case from numeric snake case' do
+      expect('kebab1_case'.kebab).to eq 'kebab1-case'
+    end
+
+    it 'returns a kebab case from space case' do
+      expect('kebab case'.kebab).to eq 'kebab-case'
+    end
+
+    it 'returns a kebab case from numeric space case' do
+      expect('kebab1 case'.kebab).to eq 'kebab1-case'
+    end
+
+    it 'returns a kebab case from complex camel case' do
+      expect('KebabONECase'.kebab).to eq 'kebab-one-case'
+    end
+
+    it 'returns a kebab case from kebab case' do
+      expect('kebab-case'.kebab).to eq 'kebab-case'
     end
   end
 end
